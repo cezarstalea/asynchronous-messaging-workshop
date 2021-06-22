@@ -43,9 +43,7 @@ sam deploy \
     --guided
 {{< /highlight >}}
 
-- Confirm the first 2 proposed arguments by hitting **ENTER**.
-- **Provide your initials as unique prefix for 3rd option *Parameter UserPrefix* and hit** **ENTER**.
-- Confirm the next 2 proposed arguments by hitting **ENTER**.
+- Confirm the first 4 proposed arguments by hitting **ENTER**.
 - When you get asked **SubmitRideCompletionFunction may not have authorization defined, Is this okay? [y/N]:**, enter `y`.
 - Confirm remaining proposed arguments by hitting **ENTER**.
 
