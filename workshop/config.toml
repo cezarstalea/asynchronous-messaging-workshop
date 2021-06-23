@@ -12,7 +12,7 @@ uglyurls = true
 sectionPagesMenu = "main"
 pygmentsCodeFences = true
 pygmentsStyle = "monokai"
-baseURL = "https://marcinbelczewski.github.io/asynchronous-messaging-workshop/"
+baseURL = "https://cezarstalea.github.io/asynchronous-messaging-workshop/"
 
 [params]
   editURL = "https://code.amazon.com/packages/AwsSaDeMsgPtnMcrSrv/trees/mainline/--/workshop/content/"
@@ -37,5 +37,5 @@ hrefTargetBlank = true
 [[menu.shortcuts]] 
 name = "<i class='fab fa-github'></i> Github repo"
 identifier = "ds"
-url = "https://github.com/marcinbelczewski/asynchronous-messaging-workshop/"
+url = "https://github.com/cezarstalea/asynchronous-messaging-workshop/"
 weight = 10
