@@ -27,20 +27,35 @@ After creating `%INITIALS%-CustomerAccountingServiceQueue`, click the **Subscrib
 ![Step 3](step-3-console.png)
 {{% /expand%}}
 
-From the drop down, select the `%INITIALS%-RideCompletionTopic` ARN and click **Save**.
+In the Subscribe to Amazon SNS topic window, select the **%INITIALS%-RideCompletionTopic** and click **Save**.
 
 {{%expand "Detailed description" %}}
 ![Step 4](step-4-console.png)
 {{% /expand%}}
 
-#### 3. Validate the subscription confirmation
+#### 3. Validate the subscription and add the filter to the subscription
 
-Browse to your **[Amazon SNS console](https://console.aws.amazon.com/sns/v3/home?#/topics)** to list your existing topics. Select the `%INITIALS%-RideCompletionTopic` and verify, the subscription has the status **Confirmed**.
+Select the newly created subscription from the SNS subscriptions list and click the **View in SNS** button (this should open a new tab to the subscription in the **[Amazon SNS console](https://console.aws.amazon.com/sns/v3/home?#/topics)**).
 
 {{%expand "Detailed description" %}}
 ![Step 5](step-5-console.png)
 {{% /expand%}}
 
+Confirm that the Status of the subscription is **Confirmed**.
+
+{{%expand "Detailed description" %}}
+![Step 5](step-5-1-console.png)
+{{% /expand%}}
+
+Click **Edit** to modify the subscription.
+
+In the Edit subscription screen, click **Enable raw message delivery**. Click **Save Changes**
+
+{{%expand "Detailed description" %}}
+![Step 6](step-5-2-console.png)
+{{% /expand%}}
+
+Now that we have updated the subscription, let's set the IAM policy for our Lambda function to access the queue.
 
 #### 4. Grant permissions to our function to access the Amazon SQS queue
 
@@ -90,7 +105,7 @@ Click **Review policy** and enter the **Name** `CustomerAccountingServiceRolePol
 {{% /expand%}}
 
 
-#### 5. Add the Amazon SQS queue as event source for your Customer Notification Service AWS Lambda function
+#### 5. Add the Amazon SQS queue as event source for your Customer Accounting Service AWS Lambda function
 
 Open your **[AWS Lambda console](https://console.aws.amazon.com/lambda/home?#/functions)** and select **Functions** in the left navigation. Click on the function with the name `%INITIALS%-wild-rydes-async-msg-2-CustomerAccounting...` (assuming your have chosen `%INITIALS%-wild-rydes-async-msg-2` as your stack name). Click on the **+ Add Trigger** button on the left side of the page:
 
