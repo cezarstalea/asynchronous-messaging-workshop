@@ -6,7 +6,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name=generator content="Hugo 0.86.1">
+<meta name=generator content="Hugo 0.88.1">
 <meta name=description content="Wild Rydes Asynchronous Messaging Workshop">
 <meta name=author content="Jane Architect">
 <link rel="shortcut icon" href=https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico type=image/ico>
@@ -178,7 +178,7 @@ Resources
 <div id=body-inner>
 <h1>SAM</h1>
 <h4 id=1-update-the-aws-sam-template>1. Update the AWS SAM template</h4>
-<p>In your Cloud9 IDE for this workshop, open the SAM template file &lsquo;wild-rydes-async-messaging/lab-2/template.yaml&rsquo;. In the <strong>Resources</strong> section, add the definition for an Amazon SQS queue with the name <strong>CustomerNotificationServiceQueue</strong>, the <strong>CustomerNotificationService</strong> will use to consume messages from. You can find the AWS CloudFormation documentation to do so <strong><a href=https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html>here</a></strong>.</p>
+<p>In your Cloud9 IDE for this workshop, open the SAM template file <code>wild-rydes-async-messaging/lab-2/template.yaml</code>. In the <strong>Resources</strong> section, add the definition for an Amazon SQS queue with the name <strong>CustomerNotificationServiceQueue</strong>, the <strong>CustomerNotificationService</strong> will use to consume messages from. You can find the AWS CloudFormation documentation to do so <strong><a href=https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html>here</a></strong>.</p>
 <div class=expand>
 <div class=expand-label style=cursor:pointer onclick="$h=$(this),$h.next('div').slideToggle(100,function(){$h.children('i').attr('class',function(){return $h.next('div').is(':visible')?'fas fa-chevron-down':'fas fa-chevron-right'})})">
 <i style=font-size:x-small class="fas fa-chevron-right"></i>
@@ -289,7 +289,7 @@ sam build</code></pre></div>
 <p>Now we are ready to update the application, by running the following command to deploy the change:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sam deploy <span style=color:#ae81ff>\
 </span><span style=color:#ae81ff></span>    --guided <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    --stack-name %INITIALS-wild-rydes-async-msg-2 <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>    --stack-name %INITIALS%-wild-rydes-async-msg-2 <span style=color:#ae81ff>\
 </span><span style=color:#ae81ff></span>    --capabilities CAPABILITY_IAM</code></pre></div>
 <p>In the meantime while your waiting, you may want to have a look at the AWS SAM template to make yourself familiar with the stack we launched. Just click on the <strong>template.yaml</strong> attachment below to see the content.</p>
 <p>Because AWS SAM will only deploy/update/delete resources which are changed, it only takes a couple of seconds to deploy the new Amazon SQS queue and the Amazon SNS subscription.</p>

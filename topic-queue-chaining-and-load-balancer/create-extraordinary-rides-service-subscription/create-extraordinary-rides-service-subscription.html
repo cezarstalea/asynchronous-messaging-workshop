@@ -6,7 +6,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name=generator content="Hugo 0.86.1">
+<meta name=generator content="Hugo 0.88.1">
 <meta name=description content="Wild Rydes Asynchronous Messaging Workshop">
 <meta name=author content="Jane Architect">
 <link rel="shortcut icon" href=https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico type=image/ico>
@@ -503,7 +503,7 @@ sam build</code></pre></div>
 <p>Now we are ready to update the application, by running the following command to deploy the change:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sam deploy <span style=color:#ae81ff>\
 </span><span style=color:#ae81ff></span>    --guided <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    --stack-name %INITIALS-wild-rydes-async-msg-2 <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>    --stack-name %INITIALS%-wild-rydes-async-msg-2 <span style=color:#ae81ff>\
 </span><span style=color:#ae81ff></span>    --capabilities CAPABILITY_IAM</code></pre></div>
 <p>In the meantime while your waiting, you may want to have a look at the AWS SAM template to make yourself familiar with the stack we launched. Just click on the <strong>template.yaml</strong> attachment below to see the content.</p>
 <p>Because AWS SAM will only deploy/update/delete resources which are changed, it only takes a couple of seconds to deploy the new Amazon SQS queue and the Amazon SNS subscription.</p>

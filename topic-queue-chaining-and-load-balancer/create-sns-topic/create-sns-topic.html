@@ -6,7 +6,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name=generator content="Hugo 0.86.1">
+<meta name=generator content="Hugo 0.88.1">
 <meta name=description content="Wild Rydes Asynchronous Messaging Workshop">
 <meta name=author content="Jane Architect">
 <link rel="shortcut icon" href=https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico type=image/ico>
@@ -234,7 +234,7 @@ Cheat Sheet
 </span>
 </div>
 <div class=expand-content style=display:none>
-<pre><code>  RideCompletionTopic:
+<pre tabindex=0><code>  RideCompletionTopic:
     Type: AWS::SNS::Topic
 </code></pre>
 </div>
@@ -260,6 +260,7 @@ sam build</code></pre></div>
 </span><span style=color:#ae81ff></span>    --guided <span style=color:#ae81ff>\
 </span><span style=color:#ae81ff></span>    --stack-name %INITIALS%-wild-rydes-async-msg-2 <span style=color:#ae81ff>\
 </span><span style=color:#ae81ff></span>    --capabilities CAPABILITY_IAM    </code></pre></div>
+<p><strong>Note:</strong> you do not need to provide the arguments for the deployment, because AWS SAM saved the parameter values in a configuration file called <strong>samconfig.toml</strong>. See the <strong><a href=https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-config.html>documentation</a></strong> more information on the AWS SAM CLI configuration file.</p>
 <p>In the meantime while your waiting, you may want to have a look at the AWS SAM template to make yourself familiar with the stack we launched. Just click on the <strong>template.yaml</strong> attachment below to see the content.</p>
 <p>Because AWS SAM will only deploy/update/delete resources which are changed, it only takes a couple of seconds to deploy the new Amazon SNS topic.</p>
 </div>
