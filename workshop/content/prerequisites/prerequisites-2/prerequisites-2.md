@@ -15,6 +15,7 @@ Cloud9 requires third-party-cookies. You can whitelist the [specific domains]( h
 In your AWS Cloud9 IDE (find yours by your initials prefix), you can close the welcome tab. Run the following command in the **bash** tab (at the bottom of the IDE):
 
 {{< highlight bash >}}
+mkdir ~/environment/wild-rydes-async-messaging
 git clone https://github.com/cezarstalea/asynchronous-messaging-workshop.git ~/environment/wild-rydes-async-messaging
 mv ~/environment/wild-rydes-async-messaging/code/lab-* ~/environment/wild-rydes-async-messaging
 rm -fr ~/environment/wild-rydes-async-messaging/workshop/
